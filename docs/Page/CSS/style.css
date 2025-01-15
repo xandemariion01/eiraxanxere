@@ -161,3 +161,24 @@ body {
     margin: 0;
     padding: 0;
 }
+
+#banner {
+    /* Default settings for larger screens */
+    height: 100vh;
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+    #banner {
+        /* Reduce the height for mobile */
+        height: 50vh; /* or any other smaller value */
+        /* Optionally, disable fixed background for better performance on mobile */
+        background-attachment: scroll;
+    }
+}
