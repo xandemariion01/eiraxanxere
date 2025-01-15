@@ -1,0 +1,146 @@
+/* Configurações gerais */
+body {
+    background-color: #f9f9f9fb;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+.btn-header {
+    background: transparent;
+    position: absolute;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Menu de navegação */
+.nav-link {
+    position: relative;
+    color: #fdfdfd;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #e8e237;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Carousel */
+.carousel-item {
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    z-index: 11;
+    color: #ffffff;  
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Efeito na imagem */
+.hover-effect {
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0.7);
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .btn-header {
+        padding: 5px 10px;
+    }
+
+    .nav {
+        flex-direction: column; /* Menu vertical em telas menores */
+        align-items: center;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+
+    .carousel-item {
+        height: 50vh; /* Reduz altura do carousel em dispositivos móveis */
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.8rem; /* Texto menor no carousel */
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .hover-effect {
+        height: auto; /* Garante que a imagem se ajuste à tela */
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item {
+        height: 40vh; /* Altura menor em telas bem pequenas */
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
