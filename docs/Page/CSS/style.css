@@ -144,3 +144,20 @@ body {
         font-size: 0.9rem;
     }
 }
+
+
+#banner {
+    /* Set the height of the banner */
+    height: 100vh; /* Full viewport height, adjust as needed */
+    /* Set the background image */
+    background-image: url('../img/igreja.jpeg');
+    /* Ensure the background image covers the whole section */
+    background-size: cover;
+    /* Center the image */
+    background-position: center;
+    /* Fix the background so it doesn't scroll with the content */
+    background-attachment: fixed;
+    /* Remove any default margins or padding */
+    margin: 0;
+    padding: 0;
+}
