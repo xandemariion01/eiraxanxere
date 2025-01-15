@@ -1,0 +1,5 @@
+title: eiraxanxere
+description: Um site incrível feito com Jekyll
+theme: jekyll-theme-primer
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
