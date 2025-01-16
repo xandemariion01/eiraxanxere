@@ -3,7 +3,8 @@ body {
     background-color: #f9f9f9fb;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    overflow-x: hidden; /* Evita rolagem horizontal */
+    overflow-x: hidden;
+    /* Evita rolagem horizontal */
 }
 
 .btn-header {
@@ -77,7 +78,7 @@ body {
 
 .carousel-caption {
     z-index: 11;
-    color: #ffffff;  
+    color: #ffffff;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
@@ -104,7 +105,8 @@ body {
     }
 
     .nav {
-        flex-direction: column; /* Menu vertical em telas menores */
+        flex-direction: column;
+        /* Menu vertical em telas menores */
         align-items: center;
     }
 
@@ -114,11 +116,13 @@ body {
     }
 
     .carousel-item {
-        height: 50vh; /* Reduz altura do carousel em dispositivos móveis */
+        height: 50vh;
+        /* Reduz altura do carousel em dispositivos móveis */
     }
 
     .carousel-caption h1 {
-        font-size: 1.8rem; /* Texto menor no carousel */
+        font-size: 1.8rem;
+        /* Texto menor no carousel */
     }
 
     .carousel-caption p {
@@ -126,14 +130,16 @@ body {
     }
 
     .hover-effect {
-        height: auto; /* Garante que a imagem se ajuste à tela */
+        height: auto;
+        /* Garante que a imagem se ajuste à tela */
         width: 100%;
     }
 }
 
 @media (max-width: 576px) {
     .carousel-item {
-        height: 40vh; /* Altura menor em telas bem pequenas */
+        height: 40vh;
+        /* Altura menor em telas bem pequenas */
     }
 
     .carousel-caption h1 {
@@ -147,25 +153,8 @@ body {
 
 
 #banner {
-    /* Set the height of the banner */
-    height: 100vh; /* Full viewport height, adjust as needed */
-    /* Set the background image */
-    background-image: url('../img/igreja.jpeg');
-    /* Ensure the background image covers the whole section */
-    background-size: cover;
-    /* Center the image */
-    background-position: center;
-    /* Fix the background so it doesn't scroll with the content */
-    background-attachment: fixed;
-    /* Remove any default margins or padding */
-    margin: 0;
-    padding: 0;
-}
-
-#banner {
-    /* Default settings for larger screens */
     height: 100vh;
-    background-image: url('path/to/your/image.jpg');
+    background-image: url('../img/igreja.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -173,12 +162,47 @@ body {
     padding: 0;
 }
 
-/* Mobile-specific styles */
-@media (max-width: 767px) {
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
     #banner {
-        /* Reduce the height for mobile */
-        height: 50vh; /* or any other smaller value */
-        /* Optionally, disable fixed background for better performance on mobile */
+        height: 50vh;
+        /* Ajusta a altura para metade da tela no mobile */
         background-attachment: scroll;
+        /* Remove o efeito "fixed" para melhorar a performance no mobile */
+        background-size: cover;
+        /* Mantém a imagem ajustada ao tamanho do banner */
     }
+}
+
+@media (max-width: 480px) {
+    #banner {
+        height: 40vh;
+        /* Altura menor para telas muito pequenas */
+        background-position: top;
+        /* Ajusta o foco da imagem */
+    }
+}
+
+/* Estilo geral para os ícones das redes sociais */
+.text-body-secondary {
+    color: #6c757d; /* Cor padrão para os ícones */
+    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Cores específicas para as redes sociais */
+.text-body-secondary.twitter {
+    color: #1DA1F2!important;
+}
+
+.text-body-secondary.instagram {
+    color: #C13584!important;
+}
+
+.text-body-secondary.facebook {
+    color: #1877F2!important;
+}
+
+/* Alteração de cor ao passar o mouse */
+.text-body-secondary:hover {
+    color: #000; /* Cor de destaque ao passar o mouse */
 }
